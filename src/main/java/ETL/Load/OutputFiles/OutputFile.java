@@ -2,10 +2,10 @@ package ETL.OutputFiles;
 
 import java.util.ArrayList;
 
-public abstract class Output {
+public abstract class OutputFile {
     private String path;
 
-    public Output(String path) {
+    public OutputFile(String path) {
         this.path = path;
     }
 

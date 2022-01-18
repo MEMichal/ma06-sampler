@@ -1,15 +1,14 @@
-package ETL.OutputFiles;
+package ETL.Load.OutputFiles;
 
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class OutputJson extends Output {
-    public OutputJson(String path) {
+public class OutputFileJson extends OutputFile {
+    public OutputFileJson(String path) {
         super(path);
     }
 
@@ -20,15 +19,15 @@ public class OutputJson extends Output {
         //Creating a JSONObject object
         JSONObject jsonObject = new JSONObject();
 
-        for(int i = 1; i < records.size(); i++) {
+        for(int i = 1; i < 50000; i++) {
             //Inserting key-value pairs into the json object
             for(int j = 0; j < records.get(i).length; j++) {
                 jsonObject.put(attributes[j], records.get(i)[j]);
             }
             try {
-                FileWriter file = new FileWriter(super.getPath(), true);
-                file.write(jsonObject.toJSONString());
-                file.close();
+                FileWriter fileWriter = new FileWriter(super.getPath(), true);
+                fileWriter.write(jsonObject.toJSONString());
+                fileWriter.close();
             } catch (IOException e) {
                 e.printStackTrace();
             }
