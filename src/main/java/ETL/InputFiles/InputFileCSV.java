@@ -6,8 +6,8 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class InputCSV extends Input {
-    public InputCSV(String path) {
+public class InputFileCSV extends InputFile {
+    public InputFileCSV(String path) {
         super(path);
     }
 

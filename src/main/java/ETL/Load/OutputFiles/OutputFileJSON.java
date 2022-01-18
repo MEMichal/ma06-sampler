@@ -2,13 +2,12 @@ package ETL.Load.OutputFiles;
 
 import org.json.simple.JSONObject;
 
-import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class OutputFileJson extends OutputFile {
-    public OutputFileJson(String path) {
+public class OutputFileJSON extends OutputFile {
+    public OutputFileJSON(String path) {
         super(path);
     }
 

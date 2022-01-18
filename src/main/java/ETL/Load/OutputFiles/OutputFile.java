@@ -1,4 +1,4 @@
-package ETL.OutputFiles;
+package ETL.Load.OutputFiles;
 
 import java.util.ArrayList;
 
