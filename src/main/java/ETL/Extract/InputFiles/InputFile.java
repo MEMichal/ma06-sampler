@@ -1,6 +1,7 @@
-package ETL.InputFiles;
+package ETL.Extract.InputFiles;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public abstract class InputFile {
     private String path;
@@ -13,5 +14,5 @@ public abstract class InputFile {
         return this.path;
     }
 
-    public abstract ArrayList<String[]> read();
+    public abstract ArrayList<HashMap<String, String>> read();
 }
